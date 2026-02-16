@@ -1,0 +1,135 @@
+.supplier-detail-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn var(--transition-base);
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.detail-container {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 3rem;
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.supplier-header-section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.supplier-name-large {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 700;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-active {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--success-color);
+  border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+.status-inactive {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: var(--secondary-color);
+  border: 1px solid rgba(108, 117, 125, 0.2);
+}
+
+.supplier-info-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.info-group {
+  text-align: center;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  min-width: auto;
+  flex: 0 1 auto;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.info-group:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--primary-light);
+}
+
+.info-group label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.info-group p {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.action-buttons-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  min-width: 200px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark mode specific adjustments */
+.dark-mode .detail-container {
+  background: var(--bg-primary);
+  border-color: var(--border-light);
+}
+
+@media (max-width: 600px) {
+  .supplier-info-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .action-buttons-container {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    width: 100%;
+  }
+}
